@@ -25,7 +25,7 @@ import java.util.Map;
  * @author andrew00x
  */
 @DTO
-public interface MachineProcessDto extends MachineProcess, Hyperlinks {
+public interface MachineProcessDto extends CommandDto, MachineProcess, Hyperlinks {
     void setPid(int pid);
 
     MachineProcessDto withPid(int pid);
@@ -52,8 +52,6 @@ public interface MachineProcessDto extends MachineProcess, Hyperlinks {
 
     @Override
     MachineProcessDto withLinks(List<Link> links);
-
-    void setAttributes(Map<String, String> attributes);
 
     MachineProcessDto withAttributes(Map<String, String> attributes);
 }
